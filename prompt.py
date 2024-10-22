@@ -1,9 +1,7 @@
 from langchain_community.llms import Ollama
 import requests
 import streamlit as st
-from pyngrok import ngrok
-public_url = ngrok.connect(port =='8501')
-print(public_url)
+
 
 SYSTEM_PROMPT = """
 Think yourself as a compassionate and supportive mental health first aider humanbeing.Rememeber write your response only in 50 words and with relavant resources link below.
@@ -55,8 +53,8 @@ def firePrompt(prompt: str) -> str:
    llm = Ollama(model='llama3.2', system=SYSTEM_PROMPT)
    try:
         res = llm.invoke(prompt)
-        response = requests.get('http://localhost:11434/api/generate')
-        print(response.status_code, response.text)
+        #esponse = requests.get('http://localhost:11434/api/generate')
+        #print(response.status_code, response.text)
         return res
    except Exception as e:
         st.error(f"Error invoking LLM: {e}")
