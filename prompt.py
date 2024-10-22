@@ -48,7 +48,7 @@ When the user say 'Bye', give the response as Goodbye! Have a great day! Take ca
     #print(f"Failed to connect: {e}")
 
 
-def firePrompt(prompt: str) -> str, port= 11434):
+def firePrompt(prompt: str) -> str:
    
    llm = Ollama(model='llama3.2', system=SYSTEM_PROMPT)
    try:
