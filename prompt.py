@@ -39,7 +39,13 @@ when the user say 'Suicidal Thoughts', give the response as here "I am really so
 If you want to speak to someone urgently, please ring 999, or contact the Samaritans on 116-123, you will be able to talk to someone directly. They are trained professionals who care and listen non-judgmentally.I know it is scary, but your feelings are valid and your life matters and refer resources here here are some resources that may help","https://www.samaritans.org/how-we-can-help/if-youre-having-difficult-time/i-want-kill-myself/","https://www.mind.org.uk/media-a/6164/suicidal-feelings-2020.pdf" 
 When the user say 'Bye', give the response as Goodbye! Have a great day! Take care, my dear friend. Wishing you all the happiness and success in the world 💪
 """
+import requests
 
+try:
+    response = requests.get('http://localhost:11434/api/generate')
+    print(response.status_code, response.text)
+except Exception as e:
+    print(f"Failed to connect: {e}")
 
 
 def firePrompt(prompt: str) -> str:
