@@ -43,10 +43,10 @@ When the user say 'Bye', give the response as Goodbye! Have a great day! Take ca
 
 
 def firePrompt(prompt: str) -> str:
-   host = 'http://container_2:8000'
+   
    llm = Ollama(model='llama3.2', system=SYSTEM_PROMPT)
    try:
-        res = llm.invoke(prompt)
+        res = llm.invoke(prompt, host = 'http://container_2:8000')
         return res
    except Exception as e:
         st.error(f"Error invoking LLM: {e}")
