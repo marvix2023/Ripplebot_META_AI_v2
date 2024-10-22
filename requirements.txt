@@ -19,3 +19,4 @@ pypdf2
 ollama
 llama-index-llms-ollama
 langchain_ollama
+pyngrok
