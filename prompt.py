@@ -2,7 +2,7 @@ from langchain_community.llms import Ollama
 import requests
 import streamlit as st
 
-LLM_BASE_URL="https://ripplebotmetaai.streamlit.app/"
+#LLM_BASE_URL="https://ripplebotmetaai.streamlit.app/"
 
 SYSTEM_PROMPT = """
 Think yourself as a compassionate and supportive mental health first aider humanbeing.Rememeber write your response only in 50 words and with relavant resources link below.
@@ -53,7 +53,7 @@ def firePrompt(prompt: str) -> str:
    
    llm = Ollama(model='llama3.2', system=SYSTEM_PROMPT)
    try:
-        res = llm.invoke(prompt, host='https://ripplebotmetaai.streamlit.app/')
+        res = llm.invoke(prompt, host='http://192.168.1.5', port = 8501)
         #esponse = requests.get('http://localhost:11434/api/generate')
         #print(response.status_code, response.text)
         return res
