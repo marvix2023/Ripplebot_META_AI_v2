@@ -1,6 +1,2 @@
-LLM_MODEL="ollama/llama2"
-LLM_API_KEY="na"
-LLM_BASE_URL="http://172.19.80.1:8501"
-LLM_EMBEDDING_MODEL="llama2"
-WORKSPACE_DIR="./workspace"
-OLLAMA_HOST="0.0.0.0"
+[server]
+port=80
