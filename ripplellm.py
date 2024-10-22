@@ -11,18 +11,18 @@ import PyPDF2
 
 
 #load the pdf files from the path
-loader = DirectoryLoader('data/',glob="*.pdf",loader_cls=PyPDFLoader)
-signpost_data = loader.load()
+#loader = DirectoryLoader('data/',glob="*.pdf",loader_cls=PyPDFLoader)
+#signpost_data = loader.load()
 #split text into chunks
-text_splitter  = RecursiveCharacterTextSplitter(chunk_size=500,chunk_overlap=50)
-text_chunks = text_splitter.split_documents(signpost_data)
+#text_splitter  = RecursiveCharacterTextSplitter(chunk_size=500,chunk_overlap=50)
+#text_chunks = text_splitter.split_documents(signpost_data)
 
 #create embeddings
-embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2",
+#embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2",
                                    model_kwargs={'device':"cpu"})
 
 #vectorstore
-vector_store = FAISS.from_documents(text_chunks,embeddings)
+#vector_store = FAISS.from_documents(text_chunks,embeddings)
 
 
 
