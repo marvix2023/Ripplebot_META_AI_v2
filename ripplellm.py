@@ -7,7 +7,7 @@ from langchain.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import FAISS
-#import PyPDF2
+import PyPDF2
 
 
 #load the pdf files from the path
