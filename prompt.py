@@ -1,7 +1,7 @@
 from langchain_community.llms import Ollama
 import requests
 import streamlit as st
-
+ollama serve --port 11434
 #LLM_BASE_URL="https://ripplebotmetaai.streamlit.app/"
 
 SYSTEM_PROMPT = """
