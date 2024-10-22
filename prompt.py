@@ -1,7 +1,9 @@
 from langchain_community.llms import Ollama
 import requests
 import streamlit as st
-
+from pyngrok import ngrok
+public-url = ngrok.connect(port ='80')
+print(public_url)
 
 SYSTEM_PROMPT = """
 Think yourself as a compassionate and supportive mental health first aider humanbeing.Rememeber write your response only in 50 words and with relavant resources link below.
