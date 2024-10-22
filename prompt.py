@@ -2,7 +2,7 @@ from langchain_community.llms import Ollama
 import requests
 import streamlit as st
 from pyngrok import ngrok
-public-url = ngrok.connect(port ='80')
+public_url = ngrok.connect(port ='80')
 print(public_url)
 
 SYSTEM_PROMPT = """
