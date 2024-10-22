@@ -52,7 +52,7 @@ def firePrompt(prompt: str) -> str:
    
    llm = Ollama(model='llama3.2', system=SYSTEM_PROMPT)
    try:
-        res = llm.invoke(prompt, host='localhost', port=11434)
+        res = llm.invoke(prompt, host='localhost', port=8080)
         #esponse = requests.get('http://localhost:11434/api/generate')
         #print(response.status_code, response.text)
         return res
