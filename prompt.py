@@ -54,8 +54,8 @@ def firePrompt(prompt: str) -> str:
    llm = Ollama(model='llama3.2', system=SYSTEM_PROMPT)
    try:
         res = llm.invoke(prompt)
-        #esponse = requests.get('http://localhost:11434/api/generate')
-        #print(response.status_code, response.text)
+        esponse = requests.get('https://ripplebotmetaai.streamlit.app/')
+        print(response.status_code, response.text)
         return res
    except Exception as e:
         st.error(f"Error invoking LLM: {e}")
