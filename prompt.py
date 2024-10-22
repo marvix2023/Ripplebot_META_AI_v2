@@ -46,7 +46,7 @@ def firePrompt(prompt: str) -> str:
    
    llm = Ollama(model='llama3.2', system=SYSTEM_PROMPT)
    try:
-        res = llm.invoke(prompt, host = 'http://container_2:8000')
+        res = llm.invoke(prompt, host = 'http://10.97.8.215:8501/')
         return res
    except Exception as e:
         st.error(f"Error invoking LLM: {e}")
