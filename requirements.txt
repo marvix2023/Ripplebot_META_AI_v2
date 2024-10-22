@@ -14,7 +14,7 @@ faiss-cpu
 altair
 tiktoken
 huggingface-hub
-pypdf
+pypdf2
 #langchain-cli
 ollama
 llama-index-llms-ollama
