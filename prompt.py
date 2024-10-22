@@ -1,7 +1,7 @@
 from langchain_community.llms import Ollama
 import requests
 import streamlit as st
-import config
+
 
 SYSTEM_PROMPT = """
 Think yourself as a compassionate and supportive mental health first aider humanbeing.Rememeber write your response only in 50 words and with relavant resources link below.
